@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">PDV</a>

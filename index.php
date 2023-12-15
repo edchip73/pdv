@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>PDV</h1>
+    <h2>PDV</h2>
 
     <main class="form-signin w-100 m-auto">
         <form action="login.php" method="post">
