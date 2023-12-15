@@ -16,6 +16,6 @@ if ($login) {
 
     echo "Login bem-sucedido. Bem-vindo, " . $login['email'] . "!";
 } else {
-    echo "Nome de usuário ou senha incorretos.";
+    echo "<script>alert('Nome de usuário ou senha incorretos')</script>";
 }
 ?>

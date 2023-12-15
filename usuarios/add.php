@@ -1,6 +1,7 @@
 <?php
 include('../seguranca.php');
 include('../conexao.php');
+
 if($_POST){
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -16,12 +17,12 @@ if($_POST){
 <head>
     <title>Cadastro de Usuários</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
     <?php include '../menu.php';?>
-<h1>Cadastro de Usuários</h1>
+<h2>Cadastro de Usuários</h2>
 
 <form method="post" action="add.php">
     <div class="mb-3">

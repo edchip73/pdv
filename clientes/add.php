@@ -3,10 +3,10 @@ session_start();
 include('../seguranca.php');
 include('../conexao.php');
 if ($_POST) {
-    $usuario_id = $_SESSION['id'];
+   
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $sql = "insert into clientes (nome,email,usuario_id) values ('$nome','$email','$usuario_id')";
+    $sql = "insert into clientes (nome,email) values ('$nome','$email')";
     $stmt = $conexao->prepare($sql);
     $stmt->execute();
     header("location: index.php");
@@ -17,12 +17,12 @@ if ($_POST) {
 <title>Cadastro de Clientes</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
     <?php include '../menu.php';?>
-<h1>Cadastro de Clientes</h1>
+<h2>Cadastro de Clientes</h2>
 
 <form method="post" action="add.php">
 
@@ -38,10 +38,6 @@ if ($_POST) {
     <button type="submit" class="btn btn-primary">Cadastrar</button>
 
 </form>
-
-
-
-
 
 </div>
 </body>

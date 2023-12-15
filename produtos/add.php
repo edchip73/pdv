@@ -3,11 +3,10 @@ session_start();
 include('../seguranca.php');
 include('../conexao.php');
 if($_POST){
-    $usuario_id = $_SESSION['id'];
     $nome = $_POST['nome'];
     $preco = $_POST['preco'];
     $quantidade = $_POST['quantidade'];
-    $sql = "insert into produtos (nome,preco,quantidade,usuario_id) values ('$nome','$preco','$quantidade','$usuario_id')";
+    $sql = "insert into produtos (nome,preco,quantidade) values ('$nome','$preco','$quantidade')";
     $stmt = $conexao->prepare($sql);
     $stmt->execute();
     header("location: index.php");
@@ -19,12 +18,12 @@ if($_POST){
 <head>
 <title>Cadastro de produtos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
     <?php include '../menu.php';?>
-<h1>Cadastro de produtos</h1>
+<h2>Cadastro de produtos</h2>
 
 <form method="post" action="add.php">
 
